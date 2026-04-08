@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sabores — Loryan Coffee Co.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">Loryan</span>
+      <span class="logo-sub">Coffee Co.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="experiencia.html">Experiência</a></li>
+      <li><a href="sabores.html">Sabores</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <a href="contato.html" class="nav-cta">Visitar</a>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <div class="hero-tag">Cardápio</div>
+      <h1>Cada sabor,<br>uma <em style="font-style:italic">história</em>.</h1>
+      <p>Grãos selecionados de origens únicas. Cada xícara carrega o sol, a altitude e as mãos de quem plantou.</p>
+    </div>
+  </section>
+
+  <!-- ── FLAVORS ── -->
+  <section class="flavors-section">
+    <span class="section-label reveal">Nossas origens</span>
+    <h2 class="section-title reveal">Cafés de origem única.</h2>
+
+    <!-- Filter -->
+    <div class="flavors-filter reveal">
+      <button class="filter-btn active" data-cat="all">Todos</button>
+      <button class="filter-btn" data-cat="espresso">Espresso</button>
+      <button class="filter-btn" data-cat="filtrado">Filtrado</button>
+      <button class="filter-btn" data-cat="cold">Cold Brew</button>
+      <button class="filter-btn" data-cat="especial">Especiais</button>
+    </div>
+
+    <div class="flavors-grid">
+
+      <!-- Espresso cards -->
+      <div class="flavor-card reveal" data-category="espresso">
+        <div class="flavor-card-top" style="background:linear-gradient(135deg,#4a2c18,#2d1a0e)">
+          ☕
+          <span class="flavor-origin">Etiópia</span>
+        </div>
+        <div class="flavor-body">
+          <h3>Yirgacheffe Natural</h3>
+          <span class="origin-tag">Etiópia · 1900m altitude</span>
+          <p>Floral, frutado e complexo. Um espresso que surpreende quem espera amargor e encontra flores.</p>
+          <div class="flavor-notes">
+            <span class="note-tag">Jasmim</span>
+            <span class="note-tag">Pêssego</span>
+            <span class="note-tag">Bergamota</span>
+          </div>
+          <div class="intensity-row">
+            <span>Intensidade</span>
+            <div class="intensity-bar"><div class="intensity-fill" style="width:45%"></div></div>
+            <span>4.5/10</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flavor-card reveal" data-category="espresso">
+        <div class="flavor-card-top" style="background:linear-gradient(135deg,#3d1f0a,#1e0d05)">
+          ☕
+          <span class="flavor-origin">Brasil</span>
+        </div>
+        <div class="flavor-body">
+          <h3>Cerrado Mineiro</h3>
+          <span class="origin-tag">Minas Gerais · 1100m altitude</span>
+          <p>Achocolatado, encorpado e com acidez baixa. O espresso brasileiro perfeito para o dia a dia.</p>
+          <div class="flavor-notes">
+            <span class="note-tag">Chocolate</span>
+            <span class="note-tag">Nozes</span>
+            <span class="note-tag">Caramelo</span>
+          </div>
+          <div class="intensity-row">
+            <span>Intensidade</span>
+            <div class="intensity-bar"><div class="intensity-fill" style="width:72%"></div></div>
+            <span>7.2/10</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtrado -->
+      <div class="flavor-card reveal" data-category="filtrado">
+        <div class="flavor-card-top" style="background:linear-gradient(135deg,#2a4a28,#162816)">
+          🌿
+          <span class="flavor-origin">Colômbia</span>
+        </div>
+        <div class="flavor-body">
+          <h3>Huila Washed</h3>
+          <span class="origin-tag">Huila · 1750m altitude</span>
+          <p>Acidez brilhante, corpo médio. Um filtrado que se bebe devagar, sem pressa, na janela.</p>
+          <div class="flavor-notes">
+            <span class="note-tag">Maçã verde</span>
+            <span class="note-tag">Mel</span>
+            <span class="note-tag">Cítrico</span>
+          </div>
+          <div class="intensity-row">
+            <span>Intensidade</span>
+            <div class="intensity-bar"><div class="intensity-fill" style="width:38%"></div></div>
+            <span>3.8/10</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flavor-card reveal" data-category="filtrado">
+        <div class="flavor-card-top" style="background:linear-gradient(135deg,#5c3a1e,#3a2410)">
+          🌾
+          <span class="flavor-origin">Guatemala</span>
+        </div>
+        <div class="flavor-body">
+          <h3>Antigua Honey</h3>
+          <span class="origin-tag">Antigua · 1550m altitude</span>
+          <p>Processamento honey que resulta em um filtrado adocicado, aveludado com corpo generoso.</p>
+          <div class="flavor-notes">
+            <span class="note-tag">Tâmara</span>
+            <span class="note-tag">Amêndoa</span>
+            <span class="note-tag">Baunilha</span>
+          </div>
+          <div class="intensity-row">
+            <span>Intensidade</span>
+            <div class="intensity-bar"><div class="intensity-fill" style="width:55%"></div></div>
+            <span>5.5/10</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cold Brew -->
+      <div class="flavor-card reveal" data-category="cold">
+        <div class="flavor-card-top" style="background:linear-gradient(135deg,#1a2b3c,#0d1a2a)">
+          🧊
+          <span class="flavor-origin">Blend</span>
+        </div>
+        <div class="flavor-body">
+          <h3>Cold Brew Original</h3>
+          <span class="origin-tag">Blend exclusivo · 18h extração</span>
+          <p>Extraído a frio por 18 horas. Suave, sem amargor, com final longo e sedoso.</p>
+          <div class="flavor-notes">
+            <span class="note-tag">Chocolate negro</span>
+            <span class="note-tag">Tabaco suave</span>
+            <span class="note-tag">Frutas secas</span>
+          </div>
+          <div class="intensity-row">
+            <span>Intensidade</span>
+            <div class="intensity-bar"><div class="intensity-fill" style="width:60%"></div></div>
+            <span>6.0/10</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Especiais -->
+      <div class="flavor-card reveal" data-category="especial">
+        <div class="flavor-card-top" style="background:linear-gradient(135deg,var(--coffee),#8b5e3c)">
+          🍯
+          <span class="flavor-origin">Exclusivo</span>
+        </div>
+        <div class="flavor-body">
+          <h3>Loryan Signature</h3>
+          <span class="origin-tag">Criação exclusiva da casa</span>
+          <p>Espresso duplo, leite vaporizado, mel artesanal, canela ceilão e baunilha bourbon. Nossa assinatura.</p>
+          <div class="flavor-notes">
+            <span class="note-tag">Mel</span>
+            <span class="note-tag">Canela</span>
+            <span class="note-tag">Baunilha</span>
+            <span class="note-tag">Cremoso</span>
+          </div>
+          <div class="intensity-row">
+            <span>Intensidade</span>
+            <div class="intensity-bar"><div class="intensity-fill" style="width:50%"></div></div>
+            <span>5.0/10</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── NON-COFFEE ── -->
+  <section style="padding:60px 5% 100px;background:var(--beige-warm)">
+    <span class="section-label reveal">Para todos os momentos</span>
+    <h2 class="section-title reveal">Além do café.</h2>
+    <p class="section-subtitle reveal">Chás de ervas, sucos naturais, água com gás e acompanhamentos artesanais.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem;margin-top:40px;">
+      <div style="padding:28px 24px;background:var(--cream);border-radius:var(--radius-md);border:1px solid var(--beige-deep);" class="reveal">
+        <div style="font-size:2rem;margin-bottom:12px">🍵</div>
+        <strong style="font-family:var(--font-display);color:var(--green-dark);font-size:1rem">Chás artesanais</strong>
+        <p style="font-size:0.85rem;color:var(--text-light);margin-top:6px;line-height:1.7;font-family:var(--font-body);font-weight:300">Camomila, hortelã, hibisco e blends exclusivos.</p>
+      </div>
+      <div style="padding:28px 24px;background:var(--cream);border-radius:var(--radius-md);border:1px solid var(--beige-deep);" class="reveal" data-delay="80">
+        <div style="font-size:2rem;margin-bottom:12px">🥐</div>
+        <strong style="font-family:var(--font-display);color:var(--green-dark);font-size:1rem">Pães & Croissants</strong>
+        <p style="font-size:0.85rem;color:var(--text-light);margin-top:6px;line-height:1.7;font-family:var(--font-body);font-weight:300">Entregues toda manhã, direto da padaria parceira.</p>
+      </div>
+      <div style="padding:28px 24px;background:var(--cream);border-radius:var(--radius-md);border:1px solid var(--beige-deep);" class="reveal" data-delay="160">
+        <div style="font-size:2rem;margin-bottom:12px">🍫</div>
+        <strong style="font-family:var(--font-display);color:var(--green-dark);font-size:1rem">Chocolate quente</strong>
+        <p style="font-size:0.85rem;color:var(--text-light);margin-top:6px;line-height:1.7;font-family:var(--font-body);font-weight:300">70% cacau, feito com leite integral e amor.</p>
+      </div>
+      <div style="padding:28px 24px;background:var(--cream);border-radius:var(--radius-md);border:1px solid var(--beige-deep);" class="reveal" data-delay="240">
+        <div style="font-size:2rem;margin-bottom:12px">🧃</div>
+        <strong style="font-family:var(--font-display);color:var(--green-dark);font-size:1rem">Sucos naturais</strong>
+        <p style="font-size:0.85rem;color:var(--text-light);margin-top:6px;line-height:1.7;font-family:var(--font-body);font-weight:300">Laranja, maracujá, abacaxi com hortelã.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-main">Loryan</span>
+        <span class="logo-sub">Coffee Co.</span>
+        <p>Um espaço onde cada detalhe foi pensado para que você sinta, respire e desacelere.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="experiencia.html">Experiência</a></li>
+          <li><a href="sabores.html">Sabores</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Horários</h4>
+        <ul>
+          <li><a>Seg–Sex: 7h às 20h</a></li>
+          <li><a>Sábado: 8h às 21h</a></li>
+          <li><a>Domingo: 9h às 18h</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a>Rua do Café, 42 · São Paulo, SP</a></li>
+          <li><a href="mailto:ola@loryancoffee.com">ola@loryancoffee.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Loryan Coffee Co. Todos os direitos reservados.</p>
+      <p>Feito com ♥ e muito café.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

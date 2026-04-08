@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Loryan Coffee Co.</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Blog-specific extras */
+    .blog-featured {
+      padding: 60px 5% 0;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .blog-featured-img {
+      height: 440px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--green-dark), var(--coffee));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-featured-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,43,31,0.7) 0%, transparent 60%);
+    }
+    .blog-featured-cat {
+      display: inline-block;
+      font-family: var(--font-ui);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      background: var(--gold);
+      color: var(--green-dark);
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+    .blog-featured-body h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+      font-weight: 600;
+      color: var(--green-dark);
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+    .blog-featured-body p {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      font-weight: 300;
+      line-height: 1.85;
+      margin-bottom: 1.8rem;
+    }
+    .blog-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 1.4rem;
+    }
+    .author-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--coffee), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--cream);
+      flex-shrink: 0;
+    }
+    .author-info strong {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      color: var(--green-dark);
+      font-weight: 500;
+    }
+    .author-info span {
+      font-family: var(--font-ui);
+      font-size: 0.65rem;
+      color: var(--text-light);
+      letter-spacing: 0.08em;
+    }
+    .all-posts {
+      padding: 60px 5% 100px;
+    }
+    .tags-filter {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .tag-pill {
+      font-family: var(--font-ui);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border: 1px solid var(--beige-deep);
+      border-radius: 20px;
+      background: transparent;
+      color: var(--text-mid);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .tag-pill.active,
+    .tag-pill:hover {
+      background: var(--green-dark);
+      color: var(--cream);
+      border-color: var(--green-dark);
+    }
+    .blog-post-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    /* Wide card */
+    .blog-card.wide {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+    }
+    .blog-card.wide .blog-card-img {
+      height: auto;
+      min-height: 240px;
+    }
+    @media(max-width:768px){
+      .blog-featured { grid-template-columns: 1fr; }
+      .blog-post-list { grid-template-columns: 1fr; }
+      .blog-card.wide { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">Loryan</span>
+      <span class="logo-sub">Coffee Co.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="experiencia.html">Experiência</a></li>
+      <li><a href="sabores.html">Sabores</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <a href="contato.html" class="nav-cta">Visitar</a>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <div class="hero-tag">Leitura lenta</div>
+      <h1>Histórias do <em style="font-style:italic">café</em>.</h1>
+      <p>Cultura, origem, técnica e o que acontece entre a semente e a xícara.</p>
+    </div>
+  </section>
+
+  <!-- ── FEATURED ── -->
+  <section class="blog-featured">
+    <div class="blog-featured-img reveal-left">☕</div>
+    <div class="blog-featured-body reveal-right">
+      <span class="blog-featured-cat">Destaque</span>
+      <div class="blog-meta-row">
+        <div class="author-avatar">LR</div>
+        <div class="author-info">
+          <strong>Loryan Ribeiro</strong>
+          <span>20 Abril, 2025 · 8 min leitura</span>
+        </div>
+      </div>
+      <h2>O que faz um café ser "especial"? Guia completo para entender specialty coffee</h2>
+      <p>Você já viu a expressão "specialty coffee" e não sabe bem o que significa? Neste artigo, a Loryan explica — sem jargão — o que diferencia um café especial de um café comum, e por que isso importa para a sua xícara.</p>
+      <a href="#" class="btn-primary">
+        Ler artigo completo
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── ALL POSTS ── -->
+  <section class="all-posts">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px">
+      <div>
+        <span class="section-label reveal">Todos os artigos</span>
+        <h2 class="section-title reveal">Explore.</h2>
+      </div>
+    </div>
+
+    <div class="tags-filter reveal">
+      <button class="tag-pill active">Todos</button>
+      <button class="tag-pill">Origem</button>
+      <button class="tag-pill">Torrefação</button>
+      <button class="tag-pill">Cultura</button>
+      <button class="tag-pill">Técnica</button>
+      <button class="tag-pill">Barismo</button>
+      <button class="tag-pill">Sustentabilidade</button>
+    </div>
+
+    <div class="blog-post-list">
+
+      <!-- Wide featured card -->
+      <div class="blog-card wide reveal">
+        <div class="blog-card-img">
+          <div class="blog-card-img-bg">🌱</div>
+          <span class="blog-card-cat">Origem</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">14 Março, 2025 · 5 min leitura</div>
+          <h3>Da fazenda à xícara: o caminho do café especial</h3>
+          <p>Viajamos até Yirgacheffe, na Etiópia, para entender como um grão cultivado a quase 2.000 metros de altitude se torna a floral e frutada experiência que você bebe aqui. A reportagem completa do nosso processo de seleção anual.</p>
+          <a href="#" class="btn-ghost">Ler mais <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- Regular cards -->
+      <div class="blog-card reveal">
+        <div class="blog-card-img">
+          <div class="blog-card-img-bg" style="background:linear-gradient(135deg,var(--coffee),#4a2c18)">🔥</div>
+          <span class="blog-card-cat">Torrefação</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">28 Fev, 2025 · 4 min</div>
+          <h3>A arte de torrar: por que cada grão tem seu tempo</h3>
+          <p>Nosso mestre torrador fala sobre ciência e intuição na torra artesanal.</p>
+          <a href="#" class="btn-ghost">Ler mais <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="blog-card reveal" data-delay="100">
+        <div class="blog-card-img">
+          <div class="blog-card-img-bg" style="background:linear-gradient(135deg,var(--green-soft),var(--green-mid))">🌏</div>
+          <span class="blog-card-cat">Cultura</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">10 Jan, 2025 · 6 min</div>
+          <h3>Café ao redor do mundo: rituais que conectam pessoas</h3>
+          <p>Da cerimônia etíope ao espresso italiano — como o café une culturas e gerações.</p>
+          <a href="#" class="btn-ghost">Ler mais <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="blog-card reveal" data-delay="200">
+        <div class="blog-card-img">
+          <div class="blog-card-img-bg" style="background:linear-gradient(135deg,#2a3d4f,#162433)">🧊</div>
+          <span class="blog-card-cat">Técnica</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">5 Dez, 2024 · 3 min</div>
+          <h3>Cold brew vs iced coffee: qual a diferença?</h3>
+          <p>Dois cafés gelados, métodos completamente distintos. Entenda cada um.</p>
+          <a href="#" class="btn-ghost">Ler mais <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="blog-card reveal">
+        <div class="blog-card-img">
+          <div class="blog-card-img-bg" style="background:linear-gradient(135deg,#3d2d1a,#261c10)">🫘</div>
+          <span class="blog-card-cat">Barismo</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">18 Nov, 2024 · 5 min</div>
+          <h3>Como fazer o espresso perfeito em casa</h3>
+          <p>Moagem, temperatura, pressão — os segredos que poucos baristas revelam.</p>
+          <a href="#" class="btn-ghost">Ler mais <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="blog-card reveal" data-delay="100">
+        <div class="blog-card-img">
+          <div class="blog-card-img-bg" style="background:linear-gradient(135deg,#294a2a,#182e18)">♻️</div>
+          <span class="blog-card-cat">Sustentabilidade</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">2 Out, 2024 · 4 min</div>
+          <h3>Borra de café: 7 formas de reutilizar em casa</h3>
+          <p>Fertilizante, esfoliante, repelente de odores. Não jogue fora o que a natureza deu.</p>
+          <a href="#" class="btn-ghost">Ler mais <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Load more -->
+    <div style="text-align:center;margin-top:52px" class="reveal">
+      <button class="btn-secondary">
+        Carregar mais artigos
+      </button>
+    </div>
+  </section>
+
+  <!-- ── NEWSLETTER ── -->
+  <section style="padding:80px 5%;background:var(--green-dark);text-align:center;position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,169,110,0.06),transparent 70%);pointer-events:none"></div>
+    <span class="section-label reveal" style="color:var(--gold)">Newsletter</span>
+    <h2 class="section-title reveal" style="color:var(--cream);max-width:500px;margin:0 auto 1rem">
+      Histórias do café na sua caixa de entrada.
+    </h2>
+    <p class="reveal" style="font-size:0.95rem;color:rgba(245,239,230,0.55);margin-bottom:2rem;font-family:var(--font-body);font-weight:300">
+      Uma vez por semana. Sem spam. Só boas histórias.
+    </p>
+    <form onsubmit="return false" style="display:flex;gap:12px;max-width:420px;margin:0 auto;" class="reveal">
+      <input
+        type="email"
+        placeholder="seu@email.com"
+        style="flex:1;padding:13px 18px;font-family:var(--font-body);font-size:0.95rem;background:rgba(245,239,230,0.08);border:1px solid rgba(201,169,110,0.25);color:var(--cream);border-radius:2px;outline:none;"
+      />
+      <button class="btn-primary" onclick="this.textContent='Inscrito ✓'">Assinar</button>
+    </form>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-main">Loryan</span>
+        <span class="logo-sub">Coffee Co.</span>
+        <p>Um espaço onde cada detalhe foi pensado para que você sinta, respire e desacelere.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="experiencia.html">Experiência</a></li>
+          <li><a href="sabores.html">Sabores</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Horários</h4>
+        <ul>
+          <li><a>Seg–Sex: 7h às 20h</a></li>
+          <li><a>Sábado: 8h às 21h</a></li>
+          <li><a>Domingo: 9h às 18h</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a>Rua do Café, 42 · São Paulo, SP</a></li>
+          <li><a href="mailto:ola@loryancoffee.com">ola@loryancoffee.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Loryan Coffee Co. Todos os direitos reservados.</p>
+      <p>Feito com ♥ e muito café.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

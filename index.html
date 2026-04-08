@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loryan Coffee Co. — Café Premium</title>
+  <meta name="description" content="Uma experiência sensorial única. Café de origem, torrado com cuidado, servido com alma." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">Loryan</span>
+      <span class="logo-sub">Coffee Co.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="experiencia.html">Experiência</a></li>
+      <li><a href="sabores.html">Sabores</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <a href="contato.html" class="nav-cta">Visitar</a>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+
+    <!-- Decorative visual -->
+    <div class="hero-canvas">
+      <div class="hero-visual">
+        <div class="hero-img-frame">
+          <svg width="160" height="200" viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Coffee cup illustration -->
+            <ellipse cx="80" cy="130" rx="50" ry="8" fill="rgba(201,169,110,0.15)" />
+            <path d="M40 80 Q40 140 80 148 Q120 140 120 80 Z" fill="rgba(107,76,53,0.5)" />
+            <path d="M40 80 Q40 84 80 90 Q120 84 120 80" fill="rgba(201,169,110,0.3)" />
+            <rect x="36" y="70" width="88" height="12" rx="6" fill="rgba(245,239,230,0.12)" />
+            <path d="M120 88 Q138 88 138 104 Q138 120 120 120" stroke="rgba(201,169,110,0.4)" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <!-- Steam -->
+            <path d="M65 62 Q60 50 65 38 Q70 26 65 14" stroke="rgba(201,169,110,0.35)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M80 58 Q75 46 80 34 Q85 22 80 10" stroke="rgba(201,169,110,0.35)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M95 62 Q90 50 95 38 Q100 26 95 14" stroke="rgba(201,169,110,0.35)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Saucer -->
+            <ellipse cx="80" cy="152" rx="58" ry="9" fill="rgba(107,76,53,0.3)" />
+            <ellipse cx="80" cy="152" rx="58" ry="9" fill="none" stroke="rgba(201,169,110,0.2)" stroke-width="1" />
+          </svg>
+        </div>
+        <div class="hero-badge">
+          <span>12</span>
+          <span>anos de<br>história</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <div class="hero-tag">Specialty Coffee</div>
+      <h1>
+        O café que<br>
+        <em>acalma</em> a<br>
+        alma.
+      </h1>
+      <p class="hero-desc">
+        Cada xícara é uma pausa. Um ritual silencioso entre você e o melhor que a terra pode oferecer.
+      </p>
+      <div class="hero-actions">
+        <a href="sabores.html" class="btn-primary">
+          Ver Sabores
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="experiencia.html" class="btn-secondary" style="border-color:rgba(245,239,230,0.3);color:var(--cream)">
+          Nossa experiência
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hero-scroll">
+      <span>Rolar</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── HIGHLIGHT STRIP ── -->
+  <div class="highlight-strip">
+    <div class="highlight-strip-inner">
+      <div class="highlight-item reveal" data-delay="0">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        </div>
+        <div class="highlight-text">
+          <strong>Origem Selecionada</strong>
+          <span>Grãos de 6 países</span>
+        </div>
+      </div>
+      <div class="highlight-item reveal" data-delay="100">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="highlight-text">
+          <strong>Torrefação Artesanal</strong>
+          <span>Pequenos lotes, todo cuidado</span>
+        </div>
+      </div>
+      <div class="highlight-item reveal" data-delay="200">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div class="highlight-text">
+          <strong>Com Alma</strong>
+          <span>Servido com intenção</span>
+        </div>
+      </div>
+      <div class="highlight-item reveal" data-delay="300">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="highlight-text">
+          <strong>Ambiente Tranquilo</strong>
+          <span>Seu espaço para respirar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <section class="about-section">
+    <div class="about-image-wrap reveal-left">
+      <div class="about-img">
+        <!-- Abstract coffee art -->
+        <svg width="220" height="260" viewBox="0 0 220 260" fill="none">
+          <circle cx="110" cy="130" r="90" fill="rgba(245,239,230,0.05)" />
+          <circle cx="110" cy="130" r="65" fill="rgba(201,169,110,0.08)" />
+          <path d="M60 100 Q90 60 130 80 Q170 100 160 140 Q150 180 110 185 Q70 185 60 150 Q50 120 60 100Z" fill="rgba(201,169,110,0.18)" />
+          <circle cx="110" cy="130" r="28" fill="rgba(107,76,53,0.5)" />
+          <circle cx="110" cy="130" r="16" fill="rgba(245,239,230,0.12)" />
+        </svg>
+      </div>
+      <div class="about-img-accent">
+        <span class="number">2012</span>
+        <span class="label">Fundada com amor</span>
+      </div>
+    </div>
+
+    <div class="about-text reveal-right">
+      <span class="section-label">Nossa história</span>
+      <h2 class="section-title">
+        Nascemos de uma paixão<br>
+        <em style="font-style:italic; color:var(--coffee)">genuína</em> pelo café.
+      </h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">
+        A Loryan Coffee Co. surgiu de um sonho simples: criar um lugar onde o tempo desacelera. Onde cada xícara é uma conversa silenciosa entre o barista e quem bebe.
+      </p>
+      <p style="font-size:0.98rem; color:var(--text-light); margin-top:1rem; font-weight:300; line-height:1.9; font-family:var(--font-body)">
+        Trabalhamos diretamente com produtores, visitamos fazendas, e escolhemos cada lote com a seriedade de quem sabe que o café tem história antes de chegar à xícara.
+      </p>
+      <a href="experiencia.html" class="btn-ghost" style="margin-top:2rem">
+        Conhecer nossa experiência <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── MENU PREVIEW ── -->
+  <section class="menu-preview">
+    <div class="menu-header">
+      <div>
+        <span class="section-label">O que oferecemos</span>
+        <h2 class="section-title">Feito para o seu momento.</h2>
+      </div>
+      <a href="sabores.html" class="btn-ghost">
+        Ver todos os sabores <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="menu-grid" data-stagger>
+      <!-- Card 1 -->
+      <div class="menu-card reveal">
+        <div class="menu-card-img">☕</div>
+        <div class="menu-card-body">
+          <h3>Espresso Clássico</h3>
+          <p>Intenso, aveludado. A base de tudo.</p>
+          <div class="menu-card-footer">
+            <span class="menu-price">R$ 8</span>
+            <span class="menu-tag">Clássico</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="menu-card reveal">
+        <div class="menu-card-img">🥛</div>
+        <div class="menu-card-body">
+          <h3>Flat White</h3>
+          <p>Cremoso, equilibrado e suave ao paladar.</p>
+          <div class="menu-card-footer">
+            <span class="menu-price">R$ 14</span>
+            <span class="menu-tag">Especial</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="menu-card reveal">
+        <div class="menu-card-img">🌿</div>
+        <div class="menu-card-body">
+          <h3>Café de Origem</h3>
+          <p>Notas únicas de cada terroir. Edição limitada.</p>
+          <div class="menu-card-footer">
+            <span class="menu-price">R$ 22</span>
+            <span class="menu-tag">Premium</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="menu-card reveal">
+        <div class="menu-card-img">🍯</div>
+        <div class="menu-card-body">
+          <h3>Loryan Signature</h3>
+          <p>Nossa criação exclusiva. Mel, canela, vanilla.</p>
+          <div class="menu-card-footer">
+            <span class="menu-price">R$ 18</span>
+            <span class="menu-tag">Exclusivo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── QUOTE ── -->
+  <section class="quote-section">
+    <blockquote class="reveal">
+      "O café não é apenas uma bebida.<br>É uma pausa, um abraço, uma escolha de estar presente."
+    </blockquote>
+    <p class="quote-author reveal" data-delay="200">— Loryan, fundadora</p>
+  </section>
+
+  <!-- ── BLOG PREVIEW ── -->
+  <section class="blog-section">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div>
+        <span class="section-label">Do nosso blog</span>
+        <h2 class="section-title reveal">Histórias do café.</h2>
+      </div>
+      <a href="blog.html" class="btn-ghost">Ver todos <span class="arrow">→</span></a>
+    </div>
+
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <div class="blog-card-img">
+          <div class="blog-card-img-bg">🌱</div>
+          <span class="blog-card-cat">Origem</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">14 Março, 2025 · 5 min leitura</div>
+          <h3>Da fazenda à xícara: o caminho do café especial</h3>
+          <p>Como escolhemos nossos grãos e por que o terroir importa mais do que você imagina.</p>
+          <a href="blog.html" class="btn-ghost">Ler mais <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="blog-card reveal" data-delay="100">
+        <div class="blog-card-img">
+          <div class="blog-card-img-bg" style="background:linear-gradient(135deg,var(--coffee),var(--coffee-light))">🔥</div>
+          <span class="blog-card-cat">Torrefação</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">28 Fevereiro, 2025 · 4 min leitura</div>
+          <h3>A arte de torrar: por que cada grão tem seu tempo</h3>
+          <p>Nosso mestre torrador fala sobre a diferença entre ciência e intuição na torrefação.</p>
+          <a href="blog.html" class="btn-ghost">Ler mais <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="blog-card reveal" data-delay="200">
+        <div class="blog-card-img">
+          <div class="blog-card-img-bg" style="background:linear-gradient(135deg,var(--green-soft),var(--green-mid))">🌏</div>
+          <span class="blog-card-cat">Cultura</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">10 Janeiro, 2025 · 6 min leitura</div>
+          <h3>Café ao redor do mundo: rituais que conectam pessoas</h3>
+          <p>Da cerimônia etíope ao espresso italiano — como o café une culturas e gerações.</p>
+          <a href="blog.html" class="btn-ghost">Ler mais <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-main">Loryan</span>
+        <span class="logo-sub">Coffee Co.</span>
+        <p>Um espaço onde cada detalhe foi pensado para que você sinta, respire e desacelere.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="experiencia.html">Experiência</a></li>
+          <li><a href="sabores.html">Sabores</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Horários</h4>
+        <ul>
+          <li><a>Seg–Sex: 7h às 20h</a></li>
+          <li><a>Sábado: 8h às 21h</a></li>
+          <li><a>Domingo: 9h às 18h</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a>Rua do Café, 42</a></li>
+          <li><a>São Paulo, SP</a></li>
+          <li><a href="mailto:ola@loryancoffee.com">ola@loryancoffee.com</a></li>
+          <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Loryan Coffee Co. Todos os direitos reservados.</p>
+      <p>Feito com ♥ e muito café.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
